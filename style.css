@@ -13,7 +13,7 @@
 
   :root {
   --main: white;
-  --bg: #292929;
+  --bg: black;
   --accent: rgba(255,255,255,.15);
   --accent2: rgba(255,255,255,.3);
 }
