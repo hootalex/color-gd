@@ -225,7 +225,7 @@ ul:hover {
 
 .share {
   display: block;
-  position: absolute; 
+  position: fixed; 
   bottom: 20px;
   right: 20px;
   padding: var(--padding);
