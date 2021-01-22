@@ -36,6 +36,10 @@
   transform: translateY(1px);
 }
 
+a {
+  color: var(--main);
+  text-decoration: none;
+}
 
 body {
 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;  margin: 2em;
