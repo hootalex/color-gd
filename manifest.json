@@ -4,7 +4,7 @@
     "background_color": "#000000",
     "theme_color": "#0d5cbc",
     "display": "standalone",
-    "start_url": "",
+    "start_url": "/",
     "icons": [
         {
             "src": "https://cdn.glitch.com/c4928110-0022-458b-b728-6fec57635021%2F192.png?v=1611432872896",
@@ -36,5 +36,5 @@
     ],
     "orientation": "portrait",
     "description": "Save and share colors schemes simply and without an account!",
-    "scope": "https://color.gd/"
+    "scope": "/"
 }
