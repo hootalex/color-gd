@@ -24,17 +24,17 @@
     "lang": "English",
     "screenshots": [
         {
-            "src": "[Embedded]",
+            "src": "https://cdn.glitch.com/c4928110-0022-458b-b728-6fec57635021%2F1280.png?v=1611434133464",
             "sizes": "1280x800",
             "type": "image/png"
         },
         {
-            "src": "[Embedded]",
+            "src": "https://cdn.glitch.com/c4928110-0022-458b-b728-6fec57635021%2F750.png?v=1611434131412",
             "sizes": "750x1334",
             "type": "image/png"
         }
     ],
     "orientation": "portrait",
     "description": "Save and share colors schemes simply and without an account!",
-    "scope": "/"
+    "scope": "https://color.gd/"
 }
