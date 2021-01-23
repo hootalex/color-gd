@@ -207,6 +207,13 @@ ul {
     height: 50px;
     border-radius: var(--radius);
   }
+  
+  .colorlist {
+  animation: height 3s;
+  animation-timing-function: cubic-bezier(.02,.9,.58,.99);
+
+}
+  
 }
 
 @media (prefers-color-scheme: dark) {
