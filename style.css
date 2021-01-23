@@ -1,40 +1,46 @@
+body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;  margin: 2em;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+  color: var(--main);
+  background-color: var(--bg);
+  font-size: 16px;
+  margin: 20px;
+  user-select: none;
+}
+
 :root {
-    --radius: 20px;
+  --radius: 20px;
   --padding: 20px;
   --main: black;
   --bg: white;
-  --accent: rgba(0,0,0,.15);
-  --accent2: rgba(0,0,0,.3);
-}
-
-
-
-@media (prefers-color-scheme: dark) {
-  :root {
-  --main: white;
-  --bg: black;
-  --accent: rgba(255,255,255,.15);
-  --accent2: rgba(255,255,255,.3);
-}
-  
+  --accent: rgba(0,0,0,.25);
 }
 
 .light {
   --main: black;
   --bg: white;
-  --accent: rgba(0,0,0,.15);
-  --accent2: rgba(0,0,0,.3);
+  --accent: rgba(0,0,0,.25);
 }
 
 .dark {
-    --main: white;
+  --main: white;
   --bg: black;
-  --accent: rgba(255,255,255,.15);
-  --accent2: rgba(255,255,255,.3);
+  --accent: rgba(255,255,255,.25);
 }
 
-.add:hover, .listadd:hover {
+.add:active, .listadd:active, #addcolor:active, #delete:active, #x:active {
+  opacity: .4;
+}
 
+#addcolor, #delete, .plusshow, .colorlist li, .share, .listadd, .add, .theme, #x {
+  cursor: pointer;
+}
+
+.deleteshow, .plusshow, .shareshow {
+  opacity: 1!important;
+  pointer-events: all!important;
+  transform: translateY(0px);
 }
 
 #hidden {
@@ -45,23 +51,9 @@
   transform: scale(.5)
 }
 
-.add:active, .listadd:active, #addcolor:active, #delete:active, #x:active {
-  opacity: .4;
-}
-
 a {
   color: var(--main);
   text-decoration: none;
-}
-
-body {
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;  margin: 2em;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-  color: var(--main);
-  background-color: var(--bg);
-  margin: 20px;
-  user-select: none;
 }
 
 h1 {
@@ -79,14 +71,9 @@ h1, .deskadd {
   padding: var(--padding);
 }
 
-#systemcolor {
-  height: 30px;
-}
-
-
 #addcolor, #delete {
   font-size: 20px;
-  border: 1px solid var(--accent2);
+  border: 1px solid var(--accent);
   padding: var(--padding);
   border-radius: var(--radius);
 }
@@ -95,11 +82,6 @@ h1, .deskadd {
   opacity: 0;
   pointer-events: none;
   border: 1px solid crimson;
-}
-
-.deleteshow {
-  opacity: 1!important;
-  pointer-events: all!important;
 }
 
 #inserthex {
@@ -128,7 +110,7 @@ h1, .deskadd {
   background-color: var(--bg);
   border-left: 1px solid var(--accent);
   position: fixed;
-    padding: 20px;
+  padding: 20px;
   text-align: center;
   box-sizing: border-box;
   opacity: 0;
@@ -147,13 +129,7 @@ h1, .deskadd {
 
 #x {
   float: right;
-  cursor: pointer;
   font-size: 25px;
-}
-
-
-.add svg {
-  fill: var(--main);
 }
 
 .deskadd {
@@ -161,23 +137,82 @@ h1, .deskadd {
   transform: translateY(4px)
 }
 
-.add {
-  cursor: pointer;
-}
-
-
 .listadd {
   float: right;
   font-size: 40px;
   width: 40px;
   text-align: center;
-  color: var(--accent2);
-  transform: translateY(-4px)
+  color: var(--accent);
+  transform: translateY(-4px);
 }
 
 .listadd:hover {
-  cursor: pointer;
-  color: var(--main)
+  color: var(--main);
+}
+
+.success {
+  animation: success .3s;
+  pointer-events: none;
+}
+
+.colorlist li {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 40px;
+  animation: appear .2s; 
+  animation-timing-function: cubic-bezier(.17,.67,.51,1.28);
+  margin: 1px;
+  transition: .2s;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  border-top: 1px solid var(--accent);
+  font-size: 0;
+  margin: -1px;
+}
+
+.share {
+  position: fixed; 
+  bottom: 23px;
+  right: 20px;
+  padding: var(--padding);
+  z-index: 5;
+  opacity: 0;
+  background-color: var(--bg);
+  border-radius: var(--radius);
+}
+
+.theme {
+  position: fixed; 
+  bottom: 20px;
+  left: 20px;
+  padding: var(--padding);
+  z-index: 5;
+  background-color: var(--bg);
+}
+
+@media screen and (max-width: 600px) {
+:root {
+    --radius: 20px;
+  --padding: 10px;
+}
+  
+  .colorlist li {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  --main: white;
+  --bg: black;
+  --accent: rgba(255,255,255,.25);
+  }
 }
 
 @keyframes appear {
@@ -188,98 +223,4 @@ h1, .deskadd {
 @keyframes success {
   0%   { background-color: #0593ff; color: white; transform: scale(1.2)}
   100% { background-color: transparent; color: var(--main); transform: scale(1)}
-}
-
-.success {
-  animation: success .3s;
-  pointer-events: none;
-}
-
-.plusshow {
-  opacity: 1;
-}
-
-.plusshow:hover {
-  cursor: pointer;
-}
-
-/* #addcolor {
-  border: 1px solid #0593ff;
-} */
-
-#addcolor, #delete {
-  cursor: pointer;
-}
-
-.colorlist li {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  border-radius: 40px;
-  margin: 0px;
-  animation: appear .2s; 
-  animation-timing-function: cubic-bezier(.17,.67,.51,1.28);
-  margin: 1px;
-  transition: .2s;
-  cursor: pointer;
-  transition-property: background-color, transform;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  border-top: 1px solid var(--accent);
-  font-size:0;
-  margin: -1px;
-}
-
-ul:hover {
-  
-    border-top: 1px solid var(--accent2);
-
-}
-
-.share {
-  display: block;
-  position: fixed; 
-  bottom: 23px;
-  right: 20px;
-  padding: var(--padding);
-  cursor: pointer;
-  z-index: 5;
-  opacity: 0;
-  background-color: var(--bg);
-  border-radius: var(--radius);
-}
-
-.theme {
-  display: block;
-  position: fixed; 
-  bottom: 20px;
-  left: 20px;
-  padding: var(--padding);
-  cursor: pointer;
-  z-index: 5;
-  background-color: var(--bg);
-}
-
-.shareshow {
-  opacity: 1!important;
-  transform: translateY(0px);
-}
-
-
-
-@media screen and (max-width: 600px) {
-:root {
-    --radius: 20px;
-  --padding: 10px;
-}
-  
-  
-  .colorlist li {
-     width: 50px;
-  height: 50px;
-    border-radius: var(--radius);
-  }
 }
