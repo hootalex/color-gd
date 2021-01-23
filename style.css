@@ -10,7 +10,6 @@
 
 
 @media (prefers-color-scheme: dark) {
-
   :root {
   --main: white;
   --bg: black;
@@ -18,6 +17,22 @@
   --accent2: rgba(255,255,255,.3);
 }
   
+}
+
+.light {
+      --radius: 20px;
+  --padding: 20px;
+  --main: black;
+  --bg: white;
+  --accent: rgba(0,0,0,.15);
+  --accent2: rgba(0,0,0,.3);
+}
+
+.dark {
+    --main: white;
+  --bg: black;
+  --accent: rgba(255,255,255,.15);
+  --accent2: rgba(255,255,255,.3);
 }
 
 .add:hover, .listadd:hover {
@@ -171,8 +186,8 @@ h1, .deskadd {
 }
 
 @keyframes success {
-  0%   { background-color: #0593ff; color: white; }
-  100% { background-color: transparent; color: var(--main) }
+  0%   { background-color: #0593ff; color: white;}
+  100% { background-color: transparent; color: var(--main); }
 }
 
 .success {
@@ -231,8 +246,18 @@ ul:hover {
   padding: var(--padding);
   cursor: pointer;
   z-index: 5;
-  transition: 1s;
   opacity: 0;
+  background-color: var(--bg);
+}
+
+.theme {
+  display: block;
+  position: fixed; 
+  bottom: 20px;
+  left: 20px;
+  padding: var(--padding);
+  cursor: pointer;
+  z-index: 5;
   background-color: var(--bg);
 }
 

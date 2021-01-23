@@ -349,3 +349,19 @@ $(".share").on("click", function() {
 
 
 });
+
+
+
+$( ".theme" ).on( "click", function() {
+  
+  
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    $("body").toggleClass("light")
+} else {
+  
+  $("body").toggleClass("dark")
+}
+  
+
+  
+});
