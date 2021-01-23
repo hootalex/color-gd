@@ -333,13 +333,13 @@ $(".share").on("click", function() {
         copyToClipboard(copyme)
 
         $(".sharetext").html("copied to clipboard!")
-        $(".sharetext").addClass("success")
+        $(".share").addClass("success")
 
 
         setTimeout(function() {
             $(".sharetext").html("share link")
-            $(".sharetext").removeClass("success")
-        }, 3000);
+            $(".share").removeClass("success")
+        }, 5000);
 
 
     }
