@@ -69,6 +69,8 @@ h1, .deskadd {
 
 .colorlist {
   padding: var(--padding);
+  animation: height 1s;
+  animation-timing-function: cubic-bezier(.02,.9,.58,.99);
 }
 
 #addcolor, #delete {
@@ -223,4 +225,9 @@ ul {
 @keyframes success {
   0%   { background-color: #0593ff; color: white; transform: scale(1.2)}
   100% { background-color: transparent; color: var(--main); transform: scale(1)}
+}
+
+@keyframes height {
+  0%   { max-height: 0px;}
+  100% { max-height: 150px;}
 }
