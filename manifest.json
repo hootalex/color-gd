@@ -1,0 +1,40 @@
+{
+    "name": "color.gd",
+    "short_name": "color.gd",
+    "background_color": "#000000",
+    "theme_color": "#0d5cbc",
+    "display": "standalone",
+    "start_url": "",
+    "icons": [
+        {
+            "src": "https://cdn.glitch.com/c4928110-0022-458b-b728-6fec57635021%2F192.png?v=1611432872896",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "https://cdn.glitch.com/c4928110-0022-458b-b728-6fec57635021%2F512.png?v=1611432870399",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ],
+    "splash_pages": null,
+    "url": "https://color.gd",
+    "lang": "English",
+    "screenshots": [
+        {
+            "src": "[Embedded]",
+            "sizes": "1280x800",
+            "type": "image/png"
+        },
+        {
+            "src": "[Embedded]",
+            "sizes": "750x1334",
+            "type": "image/png"
+        }
+    ],
+    "orientation": "portrait",
+    "description": "Save and share colors schemes simply and without an account!",
+    "scope": "/"
+}

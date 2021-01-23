@@ -6,6 +6,19 @@ console.log('%c color.gd ', 'background: #ffd817; color: #ffffff');
 console.log('%c color.gd ', 'background: #23bf08; color: #ffffff');
 console.log('%c color.gd ', 'background: #24a2f0; color: #ffffff');
 console.log('from alex.gd');
+  
+const initSW = () => {
+  if ('serviceWorker' in navigator) {
+    // Register service worker
+    navigator.serviceWorker.register('./sw.js')
+      .then((reg) => {
+      console.log('registered')
+      }).catch((e) => {
+        console.log(e);
+    });
+  }
+}
+initSW()  
 
 function rgb2hex(rgb) {
     rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
@@ -258,18 +271,36 @@ $(".share").on("click", function() {
     parsehtml()
     rawhtml = ""
 });
+  
+  function changetheme() {
+        if($("body").css("background-color")=="rgb(255, 255, 255)") {
+     
+        $("meta[name='theme-color']").attr("content", "#ffffff");
 
+      
+    console.log("background is white")
+  } else {
+     
+    $("meta[name='theme-color']").attr("content", "#000000");
+    
+    console.log("background is black")
+  }
+    
+  }
 
 
 $( ".theme" ).on( "click", function() {
   
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     $("body").toggleClass("light")
+    
 } else {
   
   $("body").toggleClass("dark")
 }
   
 });
+ 
+  
   
 });
