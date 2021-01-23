@@ -1,10 +1,13 @@
-String.prototype.replaceArray = function(find, replace) {
-    var replaceString = this;
-    for (var i = 0; i < find.length; i++) {
-        replaceString = replaceString.replace(find[i], replace[i]);
-    }
-    return replaceString;
-};
+$( document ).ready(function() {
+
+
+
+console.log('%c color.gd ', 'background: #f20045; color: #ffffff');
+console.log('%c color.gd ', 'background: #ff810a; color: #ffffff');
+console.log('%c color.gd ', 'background: #ffd817; color: #ffffff');
+console.log('%c color.gd ', 'background: #23bf08; color: #ffffff');
+console.log('%c color.gd ', 'background: #24a2f0; color: #ffffff');
+console.log('from alex.gd');
 
 function rgb2hex(rgb) {
     rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
@@ -15,7 +18,13 @@ function rgb2hex(rgb) {
     return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
 }
 
-
+String.prototype.replaceArray = function(find, replace) {
+    var replaceString = this;
+    for (var i = 0; i < find.length; i++) {
+        replaceString = replaceString.replace(find[i], replace[i]);
+    }
+    return replaceString;
+};
 
 var el = 0;
 var ed = 0;
@@ -24,7 +33,7 @@ var a = location.href;
 var hostname = $('<a>').prop('href', a).prop('hostname');
 
 
-console.log(hostname)
+// console.log(hostname)
 
 var urlstring = ""
 
@@ -36,7 +45,7 @@ var rawhtml = ""
 var title = null;
 
 if (a.indexOf("?") > -1) {
-    console.log("has a q");
+    // console.log("has a q");
 
     $(".share").addClass("shareshow")
 
@@ -58,7 +67,7 @@ if (a.indexOf("?") > -1) {
         return colorList[index].split("-");
     }
 
-    console.log(colorItems);
+    // console.log(colorItems);
 
     //this worked, kind of
 
@@ -115,7 +124,7 @@ $("#addcolor").on("click", function() {
 
     }
 
-    console.log("add color clicked")
+    // console.log("add color clicked")
 });
 
 $(".listcontainer").on("click", ".listadd", function() {
@@ -144,7 +153,7 @@ $(".listcontainer").on("click", ".listadd", function() {
                 "<li style='background-color:" + colorPicker.color.hexString + ";'></li>"
             );
 
-            console.log(this);
+            // console.log(this);
 
             el = 0;
             $("#addcolor").removeClass("add");
@@ -178,7 +187,7 @@ var colorPicker = new iro.ColorPicker("#iro", {
 
 
 function onColorChange(color) {
-    console.log(colorPicker.color.hexString)
+    // console.log(colorPicker.color.hexString)
     $("#inserthex").val(colorPicker.color.hexString)
     $("#colorpreview").css("background-color", colorPicker.color.hexString)
 
@@ -192,7 +201,7 @@ $("#inserthex").on("change keyup", function() {
     if ($("#inserthex").val().length == 7) {
 
         colorPicker.color.hexString = $("#inserthex").val();
-        console.log("changed")
+        // console.log("changed")
         $("#colorpreview").css("background-color", $("#inserthex").val())
 
     }
@@ -214,7 +223,7 @@ $(".listcontainer").on("click", "li", function() {
 
     var thishex = rgb2hex($(this).css("background-color"))
 
-    console.log(thishex)
+    // console.log(thishex)
 
     ed = $(this)
     $("li").removeClass("min")
@@ -226,7 +235,7 @@ $(".listcontainer").on("click", "li", function() {
 
     colorPicker.color.hexString = thishex;
 
-    console.log($(this).css("background-color"))
+    // console.log($(this).css("background-color"))
 
     $("#addcolor").on("click", function() {
 
@@ -315,7 +324,7 @@ $(".share").on("click", function() {
         var pro7 = pro6.replaceAll('"></li> ', '')
         var pro8 = pro7.replaceAll('"></li>', '')
         var pro9 = pro8.replaceAll(' ', '')
-        console.log("https://" + hostname + "/" + pro9)
+        // console.log("https://" + hostname + "/" + pro9)
 
 
         var copyme = $("#hidden")
@@ -365,3 +374,6 @@ $( ".theme" ).on( "click", function() {
 
   
 });
+  
+  
+  });
