@@ -208,7 +208,7 @@ ul {
   z-index: 5;
   opacity: 0;
   background-color: var(--bg);
-  border-radius: 50%;
+  border-radius: var(--radius);
 }
 
 .theme {
@@ -218,6 +218,7 @@ ul {
   padding: var(--padding);
   z-index: 5;
   background-color: var(--bg);
+  border-radius: 50px;
 }
 
 @media screen and (max-width: 600px) {
