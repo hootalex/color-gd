@@ -110,7 +110,7 @@ h1, .deskadd {
   height: 100%;
   right: 0;
   top: 0;
-  min-width: 200px;
+  width: 260px;
   background-color: var(--bg);
   border-left: 1px solid var(--accent);
   position: fixed;
@@ -218,6 +218,56 @@ ul {
   animation-timing-function: cubic-bezier(.02,.9,.58,.99);
 
 }
+  
+}
+
+@media screen and (max-width: 250px) {
+  
+  :root {
+  --padding: 5px;
+  }
+  
+  .colorpicker {
+    width: 100%;
+  }
+  
+  .colorlist li {
+    height: 20px;
+    width: 20px;
+    border-radius: 8px;
+  }
+  
+  .listadd {
+    font-size: 20px;
+    transform: translateY(-3px);
+    width: 12px;
+  }
+  
+  body {
+    font-size: 10px;
+    margin: 8px;
+  }
+  
+  .theme {
+    bottom: 5px;
+    left: 5px;
+  }
+  
+  .share {
+    bottom: 5px;
+    right: 5px;
+  }
+  
+  h1 {
+    font-size: 13px;
+  }
+  
+  #addcolor, #delete, #inserthex {
+    font-size: 10px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
   
 }
 

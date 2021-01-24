@@ -150,11 +150,16 @@ $(".colorlist").hover(
             .removeClass("plusshow");
     }
 );
+  
+  var colorpickerwidth = $(".colorpicker").width()
 
 var colorPicker = new iro.ColorPicker("#iro", {
-    width: 200,
+    width: colorpickerwidth,
     color: "#0593ff"
 });
+  
+  // console.log($(".colorpicker").width())
+  
 
 function onColorChange(color) {
     $("#inserthex").val(colorPicker.color.hexString)
