@@ -82,6 +82,10 @@ $(".deskadd").on("click", function() {
     $("#addcolor").addClass("cl");
     $("#addcolor").removeClass("ed add");
     $("#addcolor").html("start set");
+  
+  $("#delete").removeClass("deleteshow")
+  
+    $("#inserturl").addClass("showurl")
 });
 
 $("#x").on("click", function() {
@@ -90,6 +94,9 @@ $("#x").on("click", function() {
 });
 
 $("#addcolor").on("click", function() {
+  
+  $("#inserturl").removeClass("showurl")
+  
     if ($("#addcolor").hasClass("cl")) {
         $(".colorpicker").removeClass("colorpickershow");
 
@@ -113,6 +120,8 @@ $("#addcolor").on("click", function() {
 $(".listcontainer").on("click", ".listadd", function() {
 
     $("#addcolor").addClass("add");
+  
+    $("#delete").removeClass("deleteshow")
 
     $("#addcolor").removeClass("ed cl");
 
@@ -185,6 +194,8 @@ $(".colorlist").each(function(index) {
 $(".listcontainer").on("click", "li", function() {
 
     $("#addcolor").addClass("ed");
+  
+  $("#inserturl").removeClass("showurl")
 
     $("#delete").addClass("deleteshow")
 
@@ -306,6 +317,13 @@ $( ".theme" ).on( "click", function() {
   $("body").toggleClass("dark")
 }
   
+});
+  
+  
+  $( "#inserturl" ).on( "keyup change", function() {
+    
+    window.location.href = $("#inserturl").val();
+
 });
  
   

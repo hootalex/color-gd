@@ -86,7 +86,7 @@ h1, .deskadd {
   border: 1px solid crimson;
 }
 
-#inserthex {
+#inserthex, #inserturl {
     width: 100px;
     font-size: 20px;
     border: 0;
@@ -96,6 +96,24 @@ h1, .deskadd {
     border-radius: 0px;
     background-color: transparent;
     color: var(--main);
+}
+
+#inserturl {
+width: calc(100% - 40px);
+    font-size: 10px;
+    display: none;
+    position: absolute;
+    bottom: 30px;
+    box-sizing: border-box;
+  border: 0;
+}
+
+#inserturl:hover {
+  opacity: .5;
+}
+
+.showurl {
+  display: block!important;
 }
 
 #colorpreview {
@@ -267,11 +285,15 @@ ul {
     font-size: 13px;
   }
   
-  #addcolor, #delete, #inserthex {
+  #addcolor, #delete, #inserthex, #inserturl {
     font-size: 10px;
     padding: 5px;
     width: 100%;
     box-sizing: border-box;
+  }
+  
+  #inserturl {
+    width: calc(100% - 40px);
   }
   
 }
