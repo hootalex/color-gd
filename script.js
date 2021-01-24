@@ -41,6 +41,7 @@ String.prototype.replaceArray = function(find, replace) {
   $(".colorpicker").addClass("colorpickershow");
   $("#addcolor").addClass("cl");
   $("#addcolor").html("start set");
+  $("#inserturl").addClass("showurl")
 
 var el = 0;
 var ed = 0;
