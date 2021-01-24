@@ -46,6 +46,7 @@ var colorList = null;
 var colorItems = null;
 var rawhtml = ""
 var title = null;
+var colorpickerwidth = 200
 
 if (a.indexOf("?") > -1) {
 
@@ -160,8 +161,8 @@ $(".colorlist").hover(
     }
 );
   
-  var colorpickerwidth = $(".colorpicker").width()
-
+  colorpickerwidth = $(".colorpicker").width()
+  
 var colorPicker = new iro.ColorPicker("#iro", {
     width: colorpickerwidth,
     color: "#0593ff"
