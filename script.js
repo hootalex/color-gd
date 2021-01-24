@@ -159,6 +159,8 @@ var colorPicker = new iro.ColorPicker("#iro", {
 function onColorChange(color) {
     $("#inserthex").val(colorPicker.color.hexString)
     $("#colorpreview").css("background-color", colorPicker.color.hexString)
+    // $("#addcolor").css("border", "1px solid "+colorPicker.color.hexString)
+
 }
 
 colorPicker.on('color:change', onColorChange);
