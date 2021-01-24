@@ -228,8 +228,9 @@ $(".listcontainer").on("click", "li", function() {
         $(".colorpicker").removeClass("colorpickershow");
 
         if ($("#addcolor").hasClass("ed")) {
-          
+  
             ed.remove()
+
             ed = 0;
             $("li").removeAttr("class")
             $("#addcolor").removeClass("ed")
@@ -239,7 +240,13 @@ $(".listcontainer").on("click", "li", function() {
 
         $("ul").each(function(index) {
             if ($(this).children("li").length == 0) {
-                $(this).remove()
+              
+//                 $(this).addClass("removerow")
+              
+//                 setTimeout(() => { this.remove(); }, 500);
+
+                this.remove();
+              
             }
         })
     });
