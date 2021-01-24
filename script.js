@@ -12,7 +12,7 @@ const initSW = () => {
     // Register service worker
     navigator.serviceWorker.register('./sw.js')
       .then((reg) => {
-      console.log('registered')
+      // console.log('registered')
       }).catch((e) => {
         console.log(e);
     });
