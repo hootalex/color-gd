@@ -229,6 +229,11 @@ ul {
   
   .colorpicker {
     width: 100%;
+    border: none;
+  }
+  
+  #x {
+    font-size: 15px;
   }
   
   .colorlist li {
