@@ -36,6 +36,11 @@ String.prototype.replaceArray = function(find, replace) {
     }
     return replaceString;
 };
+  
+  
+  $(".colorpicker").addClass("colorpickershow");
+  $("#addcolor").addClass("cl");
+  $("#addcolor").html("start set");
 
 var el = 0;
 var ed = 0;
@@ -49,6 +54,10 @@ var title = null;
 var colorpickerwidth = 200
 
 if (a.indexOf("?") > -1) {
+  
+  $(".colorpicker").removeClass("colorpickershow");
+  $("#addcolor").removeClass("cl");
+  
 
     $(".share").addClass("shareshow")
 
