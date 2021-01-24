@@ -104,7 +104,7 @@ width: calc(100% - 40px);
     font-size: 10px;
     display: none;
     position: absolute;
-    bottom: 30px;
+    bottom: 15px;
     box-sizing: border-box;
   border: 0;
 }
