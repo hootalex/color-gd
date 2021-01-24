@@ -87,7 +87,8 @@ h1, .deskadd {
 }
 
 #inserthex, #inserturl {
-/*     width: 100px; */
+    width: 100%;
+    box-sizing: border-box;
     font-size: 20px;
     border: 0;
     border-bottom: 1px solid var(--accent);
