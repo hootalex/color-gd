@@ -208,7 +208,7 @@ ul {
   z-index: 5;
   opacity: 0;
   background-color: var(--bg);
-  border-radius: var(--radius);
+  border-radius: 50%;
 }
 
 .theme {
