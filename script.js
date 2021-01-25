@@ -19,39 +19,6 @@ const initSW = () => {
   }
 }
 initSW()  
-  
-  
-// var rgb2cmyk = function(r, g, b, normalized){
-//     var c = 1 - (r / 255);
-//     var m = 1 - (g / 255);
-//     var y = 1 - (b / 255);
-//     var k = Math.min(c, Math.min(m, y));
-    
-//     c = (c - k) / (1 - k);
-//     m = (m - k) / (1 - k);
-//     y = (y - k) / (1 - k);
-    
-//     if(!normalized){
-//         c = Math.round(c * 10000) / 100;
-//         m = Math.round(m * 10000) / 100;
-//         y = Math.round(y * 10000) / 100;
-//         k = Math.round(k * 10000) / 100;
-//     }
-    
-//     c = isNaN(c) ? 0 : c;
-//     m = isNaN(m) ? 0 : m;
-//     y = isNaN(y) ? 0 : y;
-//     k = isNaN(k) ? 0 : k;
-    
-//     return {
-//         c: c,
-//         m: m,
-//         y: y,
-//         k: k
-//     }
-// }
-
-
 
 function rgb2hex(rgb) {
     rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
@@ -78,16 +45,31 @@ String.prototype.replaceArray = function(find, replace) {
 
 var el = 0;
 var ed = 0;
-var a = location.href;
+var a = location.href.split(';')[0];
+var title = location.href.split(';').pop();
+var urititle = encodeURI($("#title").val())
 var hostname = $('<a>').prop('href', a).prop('hostname');
 var urlstring = ""
 var colorList = null;
 var colorItems = null;
 var rawhtml = ""
-var title = null;
 var colorpickerwidth = 200
 
+
+  $("#title").on( "keyup change", function() {
+  console.log($("#title").val())
+    
+    urititle = encodeURI($("#title").text())
+    
+    console.log(urititle)
+});
+
 if (a.indexOf("?") > -1) {
+  
+  $("#title").val(decodeURI(title))
+  
+  console.log(a)
+  console.log(title)
   
   $(".colorpicker").removeClass("colorpickershow");
   $("#addcolor").removeClass("cl");
@@ -336,7 +318,7 @@ $(".share").on("click", function() {
 
         var copyme = $("#hidden")
 
-        copyme.html("https://" + hostname + "/" + pro9)
+        copyme.html("https://" + hostname + "/" + pro9 + ";" + encodeURI($("#title").val()))
 
         function copyToClipboard(copyme) {
             var $temp = $("<input>");
