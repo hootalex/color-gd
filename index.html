@@ -40,7 +40,7 @@
     
          <div class="add deskadd">new set</div>
     
-          <input spellcheck="false" id="title" autocomplete="off" type="text" maxlength="30" placeholder="color.gd">
+          <input onkeypress="return ((event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.charCode == 8 || event.charCode == 32 || (event.charCode >= 48 && event.charCode <= 57));" spellcheck="false" id="title" autocomplete="off" type="text" maxlength="30" placeholder="color.gd">
     
     <div class="colorpicker">
       <div id="x">×</div>
