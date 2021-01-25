@@ -61,12 +61,17 @@ var colorpickerwidth = 200
     
     urititle = encodeURI($("#title").text())
     
-    console.log(urititle)
+    // console.log(urititle)
 });
 
 if (a.indexOf("?") > -1) {
   
-  $("#title").val(decodeURI(title))
+  if (title == a) {
+    
+  } else {
+    $("#title").val(decodeURI(title))
+    
+  }
   
   console.log(a)
   console.log(title)
