@@ -1,9 +1,3 @@
-@font-face {
-  font-family: 'Whirlybats';
-  src: url('https://cdn.glitch.com/230aa42e-94e6-443c-96f9-1f7a1c45087b%2FWhirlybatsVariable.ttf?v=1606423474699')  format('truetype');
-}
-
-
 body {
 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;  margin: 2em;
 -webkit-font-smoothing: antialiased;
