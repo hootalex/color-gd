@@ -19,6 +19,39 @@ const initSW = () => {
   }
 }
 initSW()  
+  
+  
+// var rgb2cmyk = function(r, g, b, normalized){
+//     var c = 1 - (r / 255);
+//     var m = 1 - (g / 255);
+//     var y = 1 - (b / 255);
+//     var k = Math.min(c, Math.min(m, y));
+    
+//     c = (c - k) / (1 - k);
+//     m = (m - k) / (1 - k);
+//     y = (y - k) / (1 - k);
+    
+//     if(!normalized){
+//         c = Math.round(c * 10000) / 100;
+//         m = Math.round(m * 10000) / 100;
+//         y = Math.round(y * 10000) / 100;
+//         k = Math.round(k * 10000) / 100;
+//     }
+    
+//     c = isNaN(c) ? 0 : c;
+//     m = isNaN(m) ? 0 : m;
+//     y = isNaN(y) ? 0 : y;
+//     k = isNaN(k) ? 0 : k;
+    
+//     return {
+//         c: c,
+//         m: m,
+//         y: y,
+//         k: k
+//     }
+// }
+
+
 
 function rgb2hex(rgb) {
     rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
@@ -183,12 +216,32 @@ var colorPicker = new iro.ColorPicker("#iro", {
 
 function onColorChange(color) {
     $("#inserthex").val(colorPicker.color.hexString)
+    $("#insertred").val(colorPicker.color.red)
+    $("#insertgreen").val(colorPicker.color.green)
+    $("#insertblue").val(colorPicker.color.blue)
+
     $("#colorpreview").css("background-color", colorPicker.color.hexString)
-    // $("#addcolor").css("border", "1px solid "+colorPicker.color.hexString)
+    
+  // console.log(rgb2cmyk(colorPicker.color.red,colorPicker.color.green,colorPicker.color.blue))
+    
+  
 
 }
 
 colorPicker.on('color:change', onColorChange);
+  
+  $("#insertred, #insertgreen, #insertblue").on("change keyup", function() {
+    
+    if ($(this) > 255 ) {$(this).val("255")}
+    
+        colorPicker.color.red = $("#insertred").val();
+        colorPicker.color.green = $("#insertgreen").val();
+        colorPicker.color.blue = $("#insertblue").val();
+      
+        $("#inserthex").val(colorPicker.color.hexString)
+    
+
+});
 
 $("#inserthex").on("change keyup", function() {
 
