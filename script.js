@@ -47,7 +47,7 @@ var el = 0;
 var ed = 0;
 var a = location.href.split(';')[0];
 var title = location.href.split(';').pop();
-var urititle = encodeURI($("#title").val())
+var urititle = encodeURIComponent($("#title").val())
 var hostname = $('<a>').prop('href', a).prop('hostname');
 var urlstring = ""
 var colorList = null;
@@ -59,7 +59,7 @@ var colorpickerwidth = 200
   $("#title").on( "keyup change", function() {
   console.log($("#title").val())
     
-    urititle = encodeURI($("#title").text())
+    urititle = encodeURIComponent($("#title").text())
     
     // console.log(urititle)
 });
@@ -69,7 +69,7 @@ if (a.indexOf("?") > -1) {
   if (title == a) {
     
   } else {
-    $("#title").val(decodeURI(title))
+    $("#title").val(decodeURIComponent(title))
     
   }
   
@@ -323,7 +323,7 @@ $(".share").on("click", function() {
 
         var copyme = $("#hidden")
 
-        copyme.html("https://" + hostname + "/" + pro9 + ";" + encodeURI($("#title").val()))
+        copyme.html("https://" + hostname + "/" + pro9 + ";" + encodeURIComponent($("#title").val()))
 
         function copyToClipboard(copyme) {
             var $temp = $("<input>");
