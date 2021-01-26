@@ -28,6 +28,20 @@ function rgb2hex(rgb) {
     }
     return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
 }
+  
+  (function($) {
+    $.fn.clickToggle = function(func1, func2) {
+        var funcs = [func1, func2];
+        this.data('toggleclicked', 0);
+        this.click(function() {
+            var data = $(this).data();
+            var tc = data.toggleclicked;
+            $.proxy(funcs[tc], this)();
+            data.toggleclicked = (tc + 1) % 2;
+        });
+        return this;
+    };
+}(jQuery));
 
 String.prototype.replaceArray = function(find, replace) {
     var replaceString = this;
@@ -375,7 +389,7 @@ $(".share").on("click", function() {
   }
 
 
-$( ".theme" ).on( "click", function() {
+$( "#invert" ).on( "click", function() {
   
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     $("body").toggleClass("light")
@@ -384,6 +398,44 @@ $( ".theme" ).on( "click", function() {
   
   $("body").toggleClass("dark")
 }
+  
+});
+  
+  
+  $( ".theme" ).on( "click", function() {
+  
+$(".prefs").addClass("prefsshow")
+  
+});
+  
+  
+//     $( "#space" ).on( "click", function() {
+  
+// // $(".colorlist > li").toggleClass("block")
+      
+//       $("head").append("<style>.colorlist li {margin: 0px!important; border-radius: 0px!important;}</style>")
+  
+// });
+  
+  
+  $('#space').clickToggle(function() {   
+
+    $("head").append("<style>.colorlist li {margin: 0px!important; border-radius: 0px!important;} .colorlist {padding: calc(var(--padding) + 1px)}</style>")
+
+    
+},
+function() {
+
+$('style').remove();
+
+    
+});
+  
+  
+  
+    $( "#closeprefs" ).on( "click", function() {
+  
+$(".prefs").removeClass("prefsshow")
   
 });
   

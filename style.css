@@ -43,17 +43,37 @@ input {
   
 }
 
-.add:hover, .listadd:hover, #addcolor:hover, #delete:hover, #x:hover, .theme:hover, .shareshow:hover, input:hover {
+.add:hover, .listadd:hover, #addcolor:hover, #delete:hover, #x:hover, .theme:hover, .shareshow:hover, input:hover, .prefs span:hover {
   opacity: .65!important;
 }
 
-#addcolor, #delete, .plusshow, .colorlist li, .share, .listadd, .add, .theme, #x {
+#addcolor, #delete, .plusshow, .colorlist li, .share, .listadd, .add, .theme, #x, .prefs span {
   cursor: pointer;
 }
 
 .deleteshow, .plusshow, .shareshow {
   opacity: 1!important;
   pointer-events: all!important;
+  transform: translateY(0px);
+}
+
+.prefs {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: var(--padding);
+  display: inline-block;
+  border: 1px solid var(--accent);
+  background-color: var(--bg);
+  color: var(--main);
+  z-index: 20;
+  transform: translateY(80px);
+  transition: .3s;
+  transition-property: transform;
+  border-radius: var(--radius);
+}
+
+.prefsshow {
   transform: translateY(0px);
 }
 
@@ -218,7 +238,7 @@ width: calc(100% - 40px);
   animation: appear .2s; 
   animation-timing-function: cubic-bezier(.17,.67,.51,1.28);
   margin: 1px;
-  transition: .2s;
+/*   transition: .2s; */
 }
 
 ul {
@@ -281,6 +301,11 @@ ul {
   
   .deskadd {
     transform: translateY(2px);
+  }
+  
+  .prefs {
+    bottom: 10px;
+    left: 10px;
   }
   
   :root {
