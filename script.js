@@ -54,6 +54,7 @@ var colorList = null;
 var colorItems = null;
 var rawhtml = ""
 var colorpickerwidth = 200
+var initnames = ["My cool colors","My fancy colors","My nice colors"]
 
 
   $("#title").on( "keyup change", function() {
@@ -113,6 +114,8 @@ $(".deskadd").on("click", function() {
     $("#addcolor").addClass("cl");
     $("#addcolor").removeClass("ed add");
     $("#addcolor").html("start set");
+  
+  // $("#title").val(initnames[Math.floor(Math.random()*initnames.length)])
   
   $("#delete").removeClass("deleteshow")
   
