@@ -72,7 +72,7 @@ var initnames = ["My cool colors","My fancy colors","My nice colors"]
 
 
   $("#title").on( "keyup change", function() {
-  console.log($("#title").val())
+  // console.log($("#title").val())
     
     urititle = encodeURIComponent($("#title").text())
     
@@ -88,8 +88,8 @@ if (a.indexOf("?") > -1) {
     
   }
   
-  console.log(a)
-  console.log(title)
+  // console.log(a)
+  // console.log(title)
   
   $(".colorpicker").removeClass("colorpickershow");
   $("#addcolor").removeClass("cl");
@@ -164,6 +164,9 @@ $("#addcolor").on("click", function() {
             );
         $("#addcolor").removeClass("cl");
     }
+    console.log('%c' + colorPicker.color.hexString, 'background:'+colorPicker.color.hexString+'; color: #ffffff');
+
+  
 });
 
 $(".listcontainer").on("click", ".listadd", function() {
@@ -228,10 +231,8 @@ function onColorChange(color) {
     $("#insertblue").val(colorPicker.color.blue)
 
     $("#colorpreview").css("background-color", colorPicker.color.hexString)
-    
-  // console.log(rgb2cmyk(colorPicker.color.red,colorPicker.color.green,colorPicker.color.blue))
-    
-  
+        
+  // console.log('%c' + colorPicker.color.hexString, 'background:'+colorPicker.color.hexString+'; color: #ffffff');
 
 }
 
