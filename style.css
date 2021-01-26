@@ -40,7 +40,11 @@ input {
 }
 
 .add:active, .listadd:active, #addcolor:active, #delete:active, #x:active {
-  opacity: .4;
+  
+}
+
+.add:hover, .listadd:hover, #addcolor:hover, #delete:hover, #x:hover, .theme:hover, .shareshow:hover, input:hover {
+  opacity: .65!important;
 }
 
 #addcolor, #delete, .plusshow, .colorlist li, .share, .listadd, .add, .theme, #x {
@@ -163,10 +167,6 @@ width: calc(100% - 40px);
     bottom: 15px;
     box-sizing: border-box;
   border: 0;
-}
-
-#inserturl:hover {
-  opacity: .5;
 }
 
 .showurl {
