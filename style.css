@@ -43,12 +43,16 @@ input {
   
 }
 
-.add:hover, .listadd:hover, #addcolor:hover, #delete:hover, #x:hover, .theme:hover, .shareshow:hover, input:hover, .prefs span:hover {
+.add:hover, .listadd:hover, #addcolor:hover, #delete:hover, #x:hover, .theme:hover, .shareshow:hover, input:hover, .prefs span:hover, a:hover {
   opacity: .65!important;
 }
 
 #addcolor, #delete, .plusshow, .colorlist li, .share, .listadd, .add, .theme, #x, .prefs span {
   cursor: pointer;
+}
+
+#closeprefs {
+  padding-left: 12px;
 }
 
 .deleteshow, .plusshow, .shareshow {
