@@ -421,7 +421,7 @@ $(".prefs").addClass("prefsshow")
   
   $('#space').clickToggle(function() {   
 
-    $("head").append("<style>.colorlist li {margin: 0px!important; border-radius: 0px!important;} .colorlist {padding: calc(var(--padding) + 1px)}</style>")
+    $("head").append("<style>.colorlist li {margin: 0px!important; border-radius: 0px!important;} .colorlist {padding: calc(var(--padding) + 1px); padding-right: 15%;}</style>")
 
     
 },
