@@ -114,6 +114,7 @@ $(".deskadd").on("click", function() {
     $("#addcolor").addClass("cl");
     $("#addcolor").removeClass("ed add");
     $("#addcolor").html("start set");
+    $("#colorpreview").css("box-shadow","inset 0px 0px 0px 5px transparent")
   
   // $("#title").val(initnames[Math.floor(Math.random()*initnames.length)])
   
@@ -152,6 +153,8 @@ $("#addcolor").on("click", function() {
 });
 
 $(".listcontainer").on("click", ".listadd", function() {
+  
+    $("#colorpreview").css("box-shadow","inset 0px 0px 0px 5px transparent")
 
     $("#addcolor").addClass("add");
   
@@ -264,6 +267,8 @@ $(".listcontainer").on("click", "li", function() {
     $("#addcolor").removeClass("cl");
 
     colorPicker.color.hexString = thishex;
+  
+    $("#colorpreview").css("box-shadow","inset 0px 0px 0px 5px "+colorPicker.color.hexString)
 
     $("#addcolor").on("click", function() {
 
@@ -274,6 +279,8 @@ $(".listcontainer").on("click", "li", function() {
             ed = 0;
             $("li").removeAttr("class")
             $("#addcolor").removeClass("ed")
+          
+          
         }
     });
 
