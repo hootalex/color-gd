@@ -311,11 +311,11 @@ ul {
   }
   
   #title {
-    width: 100%;
+    width: 100%!important;
   }
   
   .colorlist {
-    padding-right: var(--padding);
+    padding-right: var(--padding)!important;
   }
   
 }
