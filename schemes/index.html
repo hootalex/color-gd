@@ -28,7 +28,7 @@
           $( document ).ready(function() {
 
 
-$(".frame").each(function() {
+$("iframe").each(function() {
   $(this).wrap("<a href="+$(this).attr("src")+"></div>");
 });
             
@@ -49,7 +49,7 @@ $(".frame").each(function() {
 
   iframe {
     width: 200px;
-    height: 100px;
+    height: 70px;
     border: 1px solid var(--accent);
     border-radius: 10px;
     pointer-events: none;
@@ -66,7 +66,8 @@ $(".frame").each(function() {
   
   <body>
     
-    <iframe class="frame" src="https://color.gd/?-ee352e-ff6319-fccc0a-6cbe45-00933c-00add0-0039a6-b933ad-996633-a7a9ac-808183;NYC%20Subway" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" allowfullscreen></iframe>
+    <iframe src="https://color.gd/?-ee352e-ff6319-fccc0a-6cbe45-00933c-00add0-0039a6-b933ad-996633-a7a9ac-808183;NYC%20Subway" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" allowfullscreen></iframe>
+    <iframe src="https://color.gd/?-e93d30-f1ede0-ebd128-4cb2fa-17076c;Marshmallow%20Fluff" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" allowfullscreen></iframe>
     
   </body>
 </html>
