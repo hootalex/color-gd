@@ -71,14 +71,14 @@ input {
   background-color: var(--bg);
   color: var(--main);
   z-index: 20;
-  transform: translateY(80px);
+  transform: translateX(-280px);
   transition: .3s;
   transition-property: transform;
   border-radius: var(--radius);
 }
 
 .prefsshow {
-  transform: translateY(0px);
+  transform: translateX(0px);
 }
 
 .colorpicker {
