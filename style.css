@@ -320,6 +320,25 @@ ul {
   
 }
 
+@media screen and (max-height: 100px) {
+  .theme, .share, .deskadd, .plusshow, .listadd {
+    display: none;
+  }
+  
+  ul {
+    border: 0;
+  }
+  
+  #title {
+    width: 100%!important;
+  }
+  
+  .colorlist {
+    padding-right: var(--padding)!important;
+  }
+  
+}
+
 @media screen and (max-width: 250px) {
   
   .deskadd {
