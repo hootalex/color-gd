@@ -306,6 +306,10 @@ ul {
     display: none;
   }
   
+  .colorlist {
+    padding-right: var(--padding);
+  }
+  
 }
 
 @media screen and (max-width: 250px) {
