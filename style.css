@@ -306,6 +306,14 @@ ul {
     display: none;
   }
   
+  ul {
+    border: 0;
+  }
+  
+  #title {
+    width: 100%;
+  }
+  
   .colorlist {
     padding-right: var(--padding);
   }
