@@ -302,8 +302,8 @@ ul {
 }
 
 @media screen and (max-height: 100px) {
-  .theme, .share, .deskadd {
-    opacity: 0!important;
+  .theme, .share, .deskadd, .plusshow {
+    display: none;
   }
   
 }
