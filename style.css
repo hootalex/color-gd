@@ -302,7 +302,7 @@ ul {
 }
 
 @media screen and (max-height: 100px) {
-  .theme, .share, .deskadd, .plusshow {
+  .theme, .share, .deskadd, .plusshow, .listadd {
     display: none;
   }
   
