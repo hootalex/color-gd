@@ -54,6 +54,7 @@ $("iframe").each(function() {
     border-radius: 10px;
     pointer-events: none;
     margin: 4px;
+    margin-bottom: 6px;
   }
       
       .framecontainer {
@@ -75,6 +76,19 @@ $("iframe").each(function() {
           width: calc(100% - 15px)
         }
 }
+      
+            @media screen and (max-width: 600px) {
+
+  a {
+        width: 47%;
+      }
+      
+      iframe {
+        width: 100%;
+        margin-bottom: -5px;
+      }
+}
+    
 
 </style>
     
