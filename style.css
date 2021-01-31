@@ -239,7 +239,7 @@ width: calc(100% - 40px);
   width: 100px;
   height: 100px;
   border-radius: 40px;
-  animation: appear .2s; 
+/*   animation: appear .2s;  */
   animation-timing-function: cubic-bezier(.17,.67,.51,1.28);
   margin: 1px;
 /*   transition: .2s; */
@@ -445,3 +445,49 @@ ul {
   0%   { max-height: 0px;}
   100% { max-height: 400px;}
 }
+
+
+
+
+
+/* draggable */
+
+.unselectable {
+    -moz-user-select: -moz-none,
+    -moz-user-select: none,
+    -o-user-select: none,
+    -khtml-user-select: none,
+    -webkit-user-select: none,
+    -ms-user-select: none,
+    user-select: none
+}
+
+.dragaware {
+    cursor: pointer;
+}
+
+.draggable_clone {
+    position: absolute; /* also set via javascript */
+    z-index: 100001;
+    pointer-events:none; /* disable mouse events on the clone */
+}
+
+.draggable.dragging, .draggable .dragging {
+    opacity: 0.5;
+}
+
+.sortable .sortable_clone {
+    position: absolute; /* also set via javascript */
+    z-index: 100001;
+    list-style-type: none;
+    opacity: 0.5;
+}
+
+.sortable .sortable_placeholder {
+    box-sizing: border-box;
+    list-style-type: none;
+    background: #eee;
+    border: 2px dotted #52b218;
+}
+
+
