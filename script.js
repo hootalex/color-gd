@@ -1,11 +1,4 @@
 $( document ).ready(function() {
-
-// console.log('%c color.gd ', 'background: #f20045; color: #ffffff');
-// console.log('%c color.gd ', 'background: #ff810a; color: #ffffff');
-// console.log('%c color.gd ', 'background: #ffd817; color: #ffffff');
-// console.log('%c color.gd ', 'background: #23bf08; color: #ffffff');
-// console.log('%c color.gd ', 'background: #24a2f0; color: #ffffff');
-// console.log('from alex.gd');
   
 const initSW = () => {
   if ('serviceWorker' in navigator) {
