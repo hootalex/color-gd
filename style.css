@@ -206,9 +206,12 @@ width: calc(100% - 40px);
 }
 
 #x {
-  float: right;
-  font-size: 25px;
-  line-height: 0;
+float: right;
+    font-size: 25px;
+    line-height: .6;
+    /* background-color: blue; */
+    height: 20px;
+    width: 20px;
 }
 
 .deskadd {
